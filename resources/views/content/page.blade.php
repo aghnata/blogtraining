@@ -10,6 +10,7 @@
     <div>
         <p> ini tampilan awal -->EDIT </p>
     </div>
+    <p> ini id buku {{ $book }} </p>
     
     <table>
         <tr>

@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Page;
+use App\Book;
 
 class PageController extends Controller
 {
     public function show(){
+        $book = Book::find(1)->showMyId();
+        $titlePage = Book::find(1)->showTitlePage(8);
+        // dd($titlePage);
+
         $pages = Page::all();
         
-        return view('content.page', compact('pages') );
+        return view('content.page', compact('pages', 'book') );
     }
 
 
